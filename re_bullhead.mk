@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+#Inherit ReOS common configuration
+$(call inherit-product-if-exists, vendor/re/main.mk)
+
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
@@ -24,10 +27,10 @@ PRODUCT_COPY_FILES := device/lge/bullhead/apns-full-conf.xml:system/etc/apns-con
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := aosp_bullhead
+PRODUCT_NAME := re_bullhead
 PRODUCT_DEVICE := bullhead
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on BullHead
+PRODUCT_MODEL := Nexus 5X
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
