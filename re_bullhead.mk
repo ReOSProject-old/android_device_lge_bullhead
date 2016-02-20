@@ -40,3 +40,7 @@ $(call inherit-product-if-exists, vendor/lge/bullhead/device-vendor.mk)
 PRODUCT_PACKAGES += \
     Launcher3
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=bullhead \
+    BUILD_FINGERPRINT=google/bullhead/bullhead:6.0.1/MMB29Q/2480792:user/release-keys \
+    PRIVATE_BUILD_DESC="bullhead-user 6.0.1 MMB29Q 2480792 release-keys"
